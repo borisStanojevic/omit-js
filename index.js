@@ -7,9 +7,7 @@ const omit = (properties, source) => {
     throw Error("Source argument must be an object.");
 
   if (properties.length === 1) {
-    const {
-      [properties[0]]: _, ...rest
-    } = source;
+    const { [properties[0]]: _, ...rest } = source;
     return rest;
   }
 
