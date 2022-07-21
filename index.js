@@ -1,7 +1,8 @@
-const omit = (properties, source) => Object.keys(source).filter(key => !properties.includes(key)).reduce((destination, key) => ({
-  ...destination,
-  [key]: source[key]
-}), {});
+const omit = (properties, source) => Object.keys(source).filter(key => !properties.includes(key))
+  .reduce((destination, key) => ({
+    ...destination,
+    [key]: source[key]
+  }), {});
 
 const x = {
   a: "a",
